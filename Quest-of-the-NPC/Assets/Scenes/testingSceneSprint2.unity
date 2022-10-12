@@ -12367,6 +12367,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8130417159016945511, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130417159016945511, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8130417159016945513, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -12381,7 +12389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8130417159016945513, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8130417159016945513, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19659,7 +19667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1101746997}
-  speed: 5
+  speed: 3
 --- !u!58 &1387317023
 CircleCollider2D:
   m_ObjectHideFlags: 0

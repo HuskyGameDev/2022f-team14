@@ -6,7 +6,12 @@ public class Avoid : MonoBehaviour
 {
     [SerializeField] private Transform player;
     [SerializeField] private float speed = 3f;
-    private Rigidbody2D rb; 
+    private Rigidbody2D rb;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     // Determine direction of player in contrast to enemy, and move away
     Vector2 findExit() 
@@ -28,7 +33,7 @@ public class Avoid : MonoBehaviour
     }
 
     // Update is called once per frame
-    void fixedUpdate()
+    void FixedUpdate()
     {
         Vector2 direction = findExit();
         rb.velocity = direction * speed;
