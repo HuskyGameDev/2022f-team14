@@ -12296,11 +12296,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8130417159016945513, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8130417159016945513, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8130417159016945513, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12351,6 +12351,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3264536666001367127, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 3264536666001367127, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264536666001367127, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.19758391
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264536666001367127, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8130417159016945509, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -12429,6 +12445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6272110169872280407, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+    - {fileID: 4524144325131728944, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
 --- !u!1 &1101746993 stripped
 GameObject:
