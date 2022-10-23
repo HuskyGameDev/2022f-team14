@@ -22,11 +22,13 @@ public class TestHealthBar : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             TakeDamage(damagePerSpace);
+            DamagePopup.Create(FindObjectOfType<PlayerController>().transform.position, damagePerSpace, false, false);
         }
 
         if (Input.GetKeyDown(KeyCode.L))
         {
             Heal(healPerSpace);
+            DamagePopup.Create(FindObjectOfType<PlayerController>().transform.position, healPerSpace, false, true);
         }
     }
 
