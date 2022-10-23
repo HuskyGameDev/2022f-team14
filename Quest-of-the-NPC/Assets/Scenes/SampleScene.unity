@@ -146,6 +146,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &488178099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488178091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8070f561cd6ae45a93a8295ab230ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1804507129}
+  health: 20
+  damagePerSpace: 5
+  healPerSpace: 5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +393,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7006017738276150585, guid: cad5208077709834cbf1496772315c7e, type: 3}
   m_PrefabInstance: {fileID: 7006017736858372801}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1804507129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7006017738276150584, guid: cad5208077709834cbf1496772315c7e, type: 3}
+  m_PrefabInstance: {fileID: 7006017736858372801}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0b993776b6e1449ab87dcb7580855b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2056775009
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +527,38 @@ PrefabInstance:
     - target: {fileID: 7006017738276150582, guid: cad5208077709834cbf1496772315c7e, type: 3}
       propertyPath: m_Name
       value: Health Bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006017738276150584, guid: cad5208077709834cbf1496772315c7e, type: 3}
+      propertyPath: gradient.ctime0
+      value: 16384
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006017738276150584, guid: cad5208077709834cbf1496772315c7e, type: 3}
+      propertyPath: gradient.ctime1
+      value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006017738276150584, guid: cad5208077709834cbf1496772315c7e, type: 3}
+      propertyPath: gradient.key0.b
+      value: 0.03146139
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006017738276150584, guid: cad5208077709834cbf1496772315c7e, type: 3}
+      propertyPath: gradient.key0.g
+      value: 0.03146139
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006017738276150584, guid: cad5208077709834cbf1496772315c7e, type: 3}
+      propertyPath: gradient.key0.r
+      value: 0.9528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006017738276150584, guid: cad5208077709834cbf1496772315c7e, type: 3}
+      propertyPath: gradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006017738276150584, guid: cad5208077709834cbf1496772315c7e, type: 3}
+      propertyPath: gradient.key1.g
+      value: 0.868332
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006017738276150584, guid: cad5208077709834cbf1496772315c7e, type: 3}
+      propertyPath: gradient.key1.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7006017738276150585, guid: cad5208077709834cbf1496772315c7e, type: 3}
       propertyPath: m_Pivot.x
