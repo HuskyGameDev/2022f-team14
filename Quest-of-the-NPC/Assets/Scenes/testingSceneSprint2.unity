@@ -12594,6 +12594,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0b993776b6e1449ab87dcb7580855b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &548559970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 548559971}
+  m_Layer: 0
+  m_Name: meleeRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &548559971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548559970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1101746997}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &794254413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12601,6 +12632,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1101746998, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3264536666001367127, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -12617,9 +12652,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6490684064527104968, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8130417159016945509, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130417159016945509, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8130417159016945510, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
       propertyPath: m_Color.b
@@ -12793,7 +12836,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.13999999, y: 0.13999999, z: 0}
   m_MaxChunkCount: 16
@@ -19931,6 +19974,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &1387317024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387317021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83fe82fe60ce534e85cf2304794332c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
 --- !u!1 &1551979278
 GameObject:
   m_ObjectHideFlags: 0
@@ -20043,3 +20099,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2121128247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8130417159016945509, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+  m_PrefabInstance: {fileID: 406417077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2121128248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121128247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e20786cff0b1cf4eb8236fed6a071b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackTime: 0.3
+  attackDirection: {fileID: 548559971}
+  canBreak:
+    serializedVersion: 2
+    m_Bits: 8
+  attackArea: 1
+  damage: 10
