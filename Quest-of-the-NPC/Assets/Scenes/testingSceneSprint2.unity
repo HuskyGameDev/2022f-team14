@@ -12387,6 +12387,14 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 471747661}
+    - target: {fileID: 3264536666001367127, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 01be68db31881964f91930cdc057df1b, type: 3}
+    - target: {fileID: 4524144325131728944, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 208508943}
     - target: {fileID: 8130417159016945509, guid: dbf249d747ed5424b9114f6465012fcc, type: 3}
       propertyPath: m_Name
       value: Player
