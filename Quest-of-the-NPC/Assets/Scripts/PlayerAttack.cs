@@ -5,13 +5,20 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     private float attackCoolDown;
-    [SerializeField] public float attackTime;
+    [SerializeField] public float meleeAttackTime;
+    [SerializeField] public float slowRangedAttackTime;
+    [SerializeField] public float fastRangedAttackTime;
 
     [SerializeField] public Transform attackDirection;
     public LayerMask canBreak;
 
-    [SerializeField] public float attackArea;
-    [SerializeField] public int damage;
+    [SerializeField] public float meleeAttackArea;
+    [SerializeField] public float slowRangedAttackArea;
+    [SerializeField] public float fastRangedAttackArea;
+
+    [SerializeField] public int meleeDamage;
+    [SerializeField] public int slowRangedAttackDamage;
+    [SerializeField] public int fastRangedAttackDamage;
     public int face;
     
 
@@ -29,15 +36,44 @@ public class PlayerAttack : MonoBehaviour
             {
                 
                 //apply damage to all enemies or breakable objects in range
-                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackDirection.position, attackArea, canBreak);
+                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackDirection.position, meleeAttackArea, canBreak);
                 for (int i = 0; i < enemies.Length; i++)
                 {
-                    enemies[i].GetComponent<enHealth>().takeDamage(damage);
+                    enemies[i].GetComponent<enHealth>().takeDamage(meleeDamage);
                 }
                 //reset timer
-                attackCoolDown = attackTime;
+                attackCoolDown = meleeAttackTime;
                 
             }
+
+            //slow ranged attacj button press
+            if (Input.GetKey(KeyCode.M))
+            {
+
+                //apply damage to all enemies or breakable objects in range
+                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackDirection.position, slowRangedAttackArea, canBreak);
+                for (int i = 0; i < enemies.Length; i++)
+                {
+                    enemies[i].GetComponent<enHealth>().takeDamage(slowRangedAttackDamage);
+                }
+                //reset timer
+                attackCoolDown = slowRangedAttackTime;
+
+            }
+            if (Input.GetKey(KeyCode.N))
+            {
+
+                //apply damage to all enemies or breakable objects in range
+                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackDirection.position, fastRangedAttackArea, canBreak);
+                for (int i = 0; i < enemies.Length; i++)
+                {
+                    enemies[i].GetComponent<enHealth>().takeDamage(fastRangedAttackDamage);
+                }
+                //reset timer
+                attackCoolDown = fastRangedAttackTime;
+
+            }
+
         }
         else 
         {
@@ -76,10 +112,16 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    //Shows melee area in scene view
+    //Shows attack areas in scene view
     void OnDrawGizmosSelected() 
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackDirection.position, attackArea);
+        Gizmos.DrawWireSphere(attackDirection.position, meleeAttackArea);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(attackDirection.position, slowRangedAttackArea);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(attackDirection.position, fastRangedAttackArea);
     }
 }
