@@ -7,10 +7,13 @@ public class Powerup : MonoBehaviour
     public GameObject pickupEffect;
 
     [SerializeField] private int healAmount;
+    [SerializeField] private float speedMultiplier = 1.3f;
+    [SerializeField] private int effectDurationInSeconds = 3;
 
     enum PowerupType
     {
-        RestoreHealth
+        RestoreHealth,
+        SpeedBoost
     }
 
     [SerializeField] private PowerupType _powerupType;
@@ -29,17 +32,32 @@ public class Powerup : MonoBehaviour
         Instantiate(pickupEffect, transform.position, transform.rotation);
         
         // Apply effect to player
-        PlayerDamage playerDmg = player.gameObject.GetComponent<PlayerDamage>();
         switch (_powerupType)
         {
             case PowerupType.RestoreHealth:
+                PlayerDamage playerDmg = player.gameObject.GetComponent<PlayerDamage>();
                 playerDmg.playerHeal(healAmount);
+                Destroy(gameObject);
+                break;
+            case PowerupType.SpeedBoost:
+                StartCoroutine(MultiplySpeed(player));
                 break;
             default:
                 break;
         }
+    }
+    
+    private IEnumerator MultiplySpeed(Component player)
+    {
+        PlayerController controller = player.gameObject.GetComponent<PlayerController>();
 
-        // Remove powerup object
+        SpriteRenderer visual = GetComponent<SpriteRenderer>();
+        visual.enabled = false;
+        
+        controller.speed *= speedMultiplier;
+        yield return new WaitForSeconds(effectDurationInSeconds);
+        controller.speed /= speedMultiplier;
+        
         Destroy(gameObject);
     }
 }
