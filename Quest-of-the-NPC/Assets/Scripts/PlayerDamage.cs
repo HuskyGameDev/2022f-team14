@@ -34,7 +34,7 @@ public class PlayerDamage : MonoBehaviour
 
 
     // Called from playerTakeDmg update above. Calls dmgEntity for the player and subtracts from health
-    private void playerTakeDmg(int dmg)
+    public void playerTakeDmg(int dmg)
     {
         GameManager.gameManager._playerHealth.dmgEntity(dmg);
         
@@ -42,11 +42,11 @@ public class PlayerDamage : MonoBehaviour
         healthBar.SetHealth(GameManager.gameManager._playerHealth.Health);
         
         // Create popup
-        DamagePopup.Create(transform.position, damagePerClick, false, false);
+        DamagePopup.Create(transform.position, dmg, false, false);
     }
 
     // Called from playerTakeDmg update above. Calls healEntity for the player and adds to health
-    private void playerHeal(int heal)
+    public void playerHeal(int heal)
     {
         GameManager.gameManager._playerHealth.healEntity(heal);
         
@@ -54,6 +54,6 @@ public class PlayerDamage : MonoBehaviour
         healthBar.SetHealth(GameManager.gameManager._playerHealth.Health);
         
         // Create popup
-        DamagePopup.Create(transform.position, healPerClick, false, true);
+        DamagePopup.Create(transform.position, heal, false, true);
     }
 }
