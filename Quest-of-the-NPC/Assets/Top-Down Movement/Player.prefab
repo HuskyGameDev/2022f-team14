@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 01be68db31881964f91930cdc057df1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4bccfec0679634944aca7329dfa9a80e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,7 +108,6 @@ GameObject:
   - component: {fileID: 8130417159016945513}
   - component: {fileID: 8130417159016945511}
   - component: {fileID: 6272110169872280407}
-  - component: {fileID: 1101746998}
   - component: {fileID: 1101747001}
   m_Layer: 0
   m_Name: Player
@@ -167,22 +166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
---- !u!58 &1101746998
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8130417159016945509}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
 --- !u!114 &1101747001
 MonoBehaviour:
   m_ObjectHideFlags: 0
