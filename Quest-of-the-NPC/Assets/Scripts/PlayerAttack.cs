@@ -20,11 +20,37 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] public int slowRangedAttackDamage;
     [SerializeField] public int fastRangedAttackDamage;
     public int face;
+
+    public Projectile projectile;
+    public Transform firePos;
+    public float projectileSpeed = 10.0f;
+    public Camera cam;
+    Vector2 mousePos;
+
+    private PlayerInputActions playerInput;
+    private Rigidbody2D rb;
     
+    void Update() {
+
+        if(Input.GetButtonDown("Fire1")) {
+            Vector3 rot = firePos.rotation.eulerAngles;
+            rot = new Vector3(rot.x,rot.y,rot.z+30);
+            Quaternion dir = Quaternion.Euler(rot.x, rot.y, rot.z);
+
+            Instantiate(projectile, firePos.position, firePos.rotation);
+            // Instantiate(projectile, firePos.position, dir);
+            // rot = new Vector3(rot.x,rot.y,rot.z-30);
+            // dir = Quaternion.Euler(rot.x, rot.y, rot.z);
+            // Instantiate(projectile, firePos.position, dir);
+        }
+
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
         directionalOffset(1);
         directionalOffset(0);
         //if sufficient time has passed
