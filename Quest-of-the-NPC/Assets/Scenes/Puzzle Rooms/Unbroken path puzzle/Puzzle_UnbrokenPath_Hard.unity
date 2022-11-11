@@ -2080,8 +2080,9 @@ MonoBehaviour:
   - {fileID: 1028716701}
   - {fileID: 1963715795}
   - {fileID: 1554548111}
-  player: {fileID: 1827576303}
+  player: {fileID: 1109747805}
   player_spawn: {fileID: 1016453058}
+  resetSeconds: 1
 --- !u!1001 &612474769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5999,11 +6000,6 @@ PrefabInstance:
     - {fileID: 4077650009564784879, guid: 90523a142f39e4d2581d7d60fbc7d4e1, type: 3}
     - {fileID: 4077650010152750171, guid: 90523a142f39e4d2581d7d60fbc7d4e1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 90523a142f39e4d2581d7d60fbc7d4e1, type: 3}
---- !u!4 &1827576303 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5207201584179349515, guid: 90523a142f39e4d2581d7d60fbc7d4e1, type: 3}
-  m_PrefabInstance: {fileID: 1827576302}
-  m_PrefabAsset: {fileID: 0}
 --- !u!61 &1827576308
 BoxCollider2D:
   m_ObjectHideFlags: 0

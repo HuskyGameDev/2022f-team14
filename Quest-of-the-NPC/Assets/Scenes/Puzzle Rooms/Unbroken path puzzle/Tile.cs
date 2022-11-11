@@ -7,9 +7,12 @@ public class Tile : MonoBehaviour
     [SerializeField] private Sprite tile_up;
     [SerializeField] private Sprite tile_down;
     [SerializeField] private Color completed_color;
+    [SerializeField] private Color failed_color;
+    [SerializeField] private Color win_color;
     
     public bool HasBeenSteppedOn = false;
     private SpriteRenderer spriteRenderer;
+    private BoxCollider2D boxCollider;
 
     public delegate void TileDoubleStepHandler();
 
@@ -17,6 +20,7 @@ public class Tile : MonoBehaviour
 
     private void Start()
     {
+        boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -51,10 +55,24 @@ public class Tile : MonoBehaviour
         spriteRenderer.sprite = tile_up;
     }
 
+    public void SetToFailed()
+    {
+        spriteRenderer.sprite = tile_down;
+        spriteRenderer.color = failed_color;
+    }
+
+    public void SetToSucceed()
+    {
+        spriteRenderer.sprite = tile_down;
+        spriteRenderer.color = win_color;
+        boxCollider.enabled = false;
+    }
+
     public void Reset()
     {
         spriteRenderer.sprite = tile_up;
         spriteRenderer.color = Color.white;
         HasBeenSteppedOn = false;
+        boxCollider.enabled = true;
     }
 }
