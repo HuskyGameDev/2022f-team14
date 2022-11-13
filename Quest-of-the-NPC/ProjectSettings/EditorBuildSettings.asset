@@ -8,10 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: 4539524624244d6e98eaa2215364b0ce
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/testingSceneSprint2.unity
     guid: da078c9031cace04f85f3d934e5dbf0b
+  - enabled: 1
+    path: Assets/Scenes/Puzzle Rooms/Unbroken path puzzle/Puzzle_UnbrokenPath_Easy.unity
+    guid: 6697c9dc75da92f418f9db36ce636d00
+  - enabled: 1
+    path: Assets/Scenes/Puzzle Rooms/Unbroken path puzzle/Puzzle_UnbrokenPath_Hard.unity
+    guid: 989103998779df64d90e762022a002f2
   m_configObjects: {}
