@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  GM: {fileID: 6001516319138575017, guid: e53844ffbd1d8014cae880d3da30ce5d, type: 3}
 --- !u!1 &7151530534404840076
 GameObject:
   m_ObjectHideFlags: 0
