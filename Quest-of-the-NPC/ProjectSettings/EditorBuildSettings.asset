@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle Rooms/Unbroken path puzzle/Puzzle_UnbrokenPath_Hard.unity
     guid: 989103998779df64d90e762022a002f2
+  - enabled: 1
+    path: Assets/Scenes/Test.unity
+    guid: de17708201c2d4b63986bfdf2a47e99e
   m_configObjects: {}

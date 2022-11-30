@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject enemyPrefab;
+    public int killCount = 0;
+
+
     // GameManager object. We make it as an object to create a singleton to ensure that only one exists.
     public static GameManager gameManager { get; private set; }
 
@@ -23,7 +29,7 @@ public class GameManager : MonoBehaviour
         {
             gameManager = this;
         }
-    }
 
+    }
    
 }

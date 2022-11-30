@@ -175,7 +175,7 @@ MonoBehaviour:
   slowRangedAttackDamage: 25
   fastRangedAttackDamage: 15
   face: 0
-  projectile: {fileID: 4421371891810084353, guid: ac92aca87e3f74fe4bd9e59910c6c2ed, type: 3}
+  projectile: {fileID: 6954460037344660607, guid: ac92aca87e3f74fe4bd9e59910c6c2ed, type: 3}
   firePos: {fileID: 4077650009512238743}
   projectileSpeed: 10
   cam: {fileID: 0}
