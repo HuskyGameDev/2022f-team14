@@ -20,7 +20,7 @@ public class Projectile_E : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        Vector3 angle = new Vector3(0, 0, 1);
+        Vector3 angle = new Vector3(0, 0, 0);
         transform.position += (transform.right) * Time.deltaTime * speed;
         Vector2 screenPosition = mainCamera.WorldToScreenPoint (transform.position);
     }
@@ -29,7 +29,7 @@ public class Projectile_E : MonoBehaviour
         if(collision.gameObject.tag == "Player") {
             collision.gameObject.GetComponent<PlayerDamage>().playerTakeDmg(slowRangedAttackDamage);
         }
-        if(collision.gameObject.tag != "projectile") { Destroy(gameObject); }
-        //Destroy(gameObject);
+        if(collision.gameObject.tag != "projectile" && collision.gameObject.tag != "Enemy") { Destroy(gameObject); }
+        
     }
 }

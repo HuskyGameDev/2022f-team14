@@ -6895,7 +6895,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1563595987}
   - component: {fileID: 1563595986}
-  - component: {fileID: 1563595988}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -6915,10 +6914,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e325884e7e42f464fa129d7a8f645596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5330527691245385249, guid: 9acb7d012ffa840d5bd2fbf76670ff8d, type: 3}
+  enemyPrefab: {fileID: 6991965450105275763, guid: d1782ac93939645d2b0890c389cb8de1, type: 3}
   Locations: {fileID: 177434659}
   count: 3
-  GM: {fileID: 0}
+  SC: {fileID: 1680777834}
 --- !u!4 &1563595987
 Transform:
   m_ObjectHideFlags: 0
@@ -6935,22 +6934,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1563595988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563595985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e325884e7e42f464fa129d7a8f645596, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 5330527691245385249, guid: 9acb7d012ffa840d5bd2fbf76670ff8d, type: 3}
-  Locations: {fileID: 177434659}
-  count: 3
-  GM: {fileID: 1672272139}
 --- !u!1 &1594610558
 GameObject:
   m_ObjectHideFlags: 0
@@ -7069,17 +7052,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 269231939}
---- !u!114 &1672272139 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6001516319138575017, guid: e53844ffbd1d8014cae880d3da30ce5d, type: 3}
-  m_PrefabInstance: {fileID: 738783525}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1672272137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8e81c9fd33dd344bbdd361e598d030e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1680777833
 GameObject:
   m_ObjectHideFlags: 0
@@ -7111,6 +7083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 792778856}
+  killCount: 0
 --- !u!4 &1680777836
 Transform:
   m_ObjectHideFlags: 0

@@ -50,12 +50,13 @@ public class Avoid : MonoBehaviour
 
     void Update() {
         if(Time.time > fire) {
-            Vector3 rot = firePos.rotation.eulerAngles;
-            rot = new Vector3(rot.x,rot.y,rot.z+30);
-            Quaternion dir = Quaternion.Euler(rot.x, rot.y, rot.z);
+             Vector3 rot = firePos.rotation.eulerAngles;
+             rot = new Vector3(rot.x,rot.y,rot.z - 75);
+             Quaternion dir = Quaternion.Euler(rot.x, rot.y, rot.z);
 
             Instantiate(projectile, firePos.position, dir);
-            rot = new Vector3(rot.x,rot.y,rot.z-30);
+
+            rot = new Vector3(rot.x,rot.y,rot.z-60);
             dir = Quaternion.Euler(rot.x, rot.y, rot.z);
             Instantiate(projectile, firePos.position, dir);
 
