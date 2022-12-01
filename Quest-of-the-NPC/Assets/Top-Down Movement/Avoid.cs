@@ -7,6 +7,8 @@ public class Avoid : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private float speed = 3f;
     private Rigidbody2D rb;
+    public Animator animator;
+    private float horizontal = 0;
 
     void Awake()
     {
@@ -28,6 +30,7 @@ public class Avoid : MonoBehaviour
         {
             down = -1;
         }
+        horizontal = left;
 
         return new Vector2(left, down); 
     }
@@ -38,5 +41,6 @@ public class Avoid : MonoBehaviour
         Vector2 direction = findExit();
         rb.velocity = direction * speed;
 
+        animator.SetFloat("Horizontal", horizontal);
     }
 }
