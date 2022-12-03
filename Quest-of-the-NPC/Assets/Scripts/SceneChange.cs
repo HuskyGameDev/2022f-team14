@@ -18,7 +18,7 @@ public class SceneChange : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col) {
         if(scene.name == "Forest" && col.tag == "Player") {
             if(killCount >= 3) {
-                SceneManager.LoadScene("Test");
+                SceneManager.LoadScene("Backrooms");
             }
             
         }
