@@ -17,10 +17,29 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzle Rooms/Unbroken path puzzle/Puzzle_UnbrokenPath_Easy.unity
     guid: 6697c9dc75da92f418f9db36ce636d00
-  - enabled: 1
-    path: Assets/Scenes/Puzzle Rooms/Unbroken path puzzle/Puzzle_UnbrokenPath_Hard.unity
-    guid: 989103998779df64d90e762022a002f2
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: de17708201c2d4b63986bfdf2a47e99e
+  - enabled: 1
+    path: Assets/Scenes/Puzzle Rooms/Unbroken path puzzle/Puzzle_UnbrokenPath_Harder.unity
+    guid: 384ed19f2ac9aa04ab29e0620e3b215c
+  - enabled: 1
+    path: Assets/Scenes/Puzzle Rooms/Unbroken path puzzle/Puzzle_UnbrokenPath_Hard
+      1.unity
+    guid: 9bb174ac432749c4baac9a79805bb957
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 94c310246f36442a88f79946916592db
+  - enabled: 1
+    path: Assets/Scenes/townLevelScene.unity
+    guid: 3d3693f52eb140240af55981441ab2bf
+  - enabled: 0
+    path: 
+    guid: 976504955a632d84082952b822e7a115
+  - enabled: 1
+    path: Assets/Scenes/Backrooms/Backrooms.unity
+    guid: 479e3c1da9029634aadc9caad78750c6
   m_configObjects: {}
